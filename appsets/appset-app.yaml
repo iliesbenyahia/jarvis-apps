@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: appsets
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: core
+  source:
+    repoURL: https://github.com/iliesbenyahia/jarvis-apps.git
+    targetRevision: HEAD
+    path: appsets
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
