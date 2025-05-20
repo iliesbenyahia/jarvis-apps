@@ -1,0 +1,10 @@
+traefik:
+  ingress:
+    enabled: true
+    
+argocd:
+  global:
+    domain: argocd.jarvis.lan
+  configs:
+    params:
+      server.insecure: "true"
