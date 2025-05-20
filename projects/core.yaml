@@ -7,10 +7,11 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  description: Core applications of my cluster
-  # Allow manifests to deploy from any Git repos
   sourceRepos:
   - '*'
-  destinations: 
+  destinations:
   - namespace: '*'
-    server: https://kubernetes.default.svc
+    server: '*'
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
