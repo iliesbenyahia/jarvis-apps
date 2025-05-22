@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: misc
+  namespace: argocd
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+  - git:
+      repoURL: https://github.com/iliesbenyahia/jarvis-apps
+      revision: HEAD
+      directories:
+      - path: apps/misc/*
+  template:
+    metadata:
+      name: '{{.path.basename}}'
+    spec:
+      project: "core"
+      source:
+        repoURL: https://github.com/iliesbenyahia/jarvis-apps.git
+        targetRevision: HEAD
+        path: '{{.path.path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{.path.basename}}'
+      syncPolicy:
+        syncOptions:
+        - CreateNamespace=true
