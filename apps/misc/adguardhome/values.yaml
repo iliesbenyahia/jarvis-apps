@@ -1,0 +1,15 @@
+traefik:
+  ingressRoute:
+    enabled: true
+    url: adguardhome.jarvis.lan
+storage:
+  storageClassName: "local-path"
+  pvc:
+    conf:
+      name: "adguard-conf-pvc"
+      volumeName: "adguard-conf-vol"
+      size: 1Mi
+    work:
+      name: "adguard-work-pvc"
+      volumeName: "adguard-work-vol"
+      size: 1Gi

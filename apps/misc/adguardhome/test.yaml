@@ -1,0 +1,100 @@
+---
+# Source: adguardhome/templates/pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: adguard-work-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-path
+  resources:
+    requests:
+      storage: 2Gi
+---
+# Source: adguardhome/templates/pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: adguard-conf-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-path
+  resources:
+    requests:
+      storage: 5Mi
+---
+# Source: adguardhome/templates/svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: adguardhome
+  name: adguardhome
+spec:
+  ports:
+  - name: web
+    port: 80
+    targetPort: 80
+  selector:
+    app: adguardhome
+---
+# Source: adguardhome/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: adguardhome
+  name: adguardhome
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adguardhome
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: adguardhome
+    spec:
+      containers:
+      - image: adguard/adguardhome:v0.107.61
+        name: adguardhome
+        ports:
+        - containerPort: 80
+          name: web
+        - containerPort: 53
+          name: dns
+          protocol: UDP
+        volumeMounts:
+        - name: adguard-work-vol
+          mountPath: /opt/adguardhome/work
+        - name: adguard-conf-vol
+          mountPath: /opt/adguardhome/conf
+        resources: {}
+      volumes:
+      - name: adguard-work-vol
+        persistentVolumeClaim:
+          claimName: adguard-work-pvc
+      - name: adguard-conf-vol
+        persistentVolumeClaim:
+          claimName: adguard-conf-pvc
+status: {}
+---
+# Source: adguardhome/templates/ingressroutes.yaml
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: adguardhome
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`adguardhome.jarvis.lan`)
+      services:
+        - name: adguardhome
+          port: 80
+  tls:
+    certResolver: default

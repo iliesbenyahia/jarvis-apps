@@ -24,5 +24,17 @@ spec:
         - containerPort: 53
           name: dns
           protocol: UDP
+        volumeMounts:
+        - name: {{ .Values.storage.pvc.work.volumeName }}
+          mountPath: /opt/adguardhome/work
+        - name: {{ .Values.storage.pvc.conf.volumeName }}
+          mountPath: /opt/adguardhome/conf
         resources: {}
+      volumes:
+      - name: {{ .Values.storage.pvc.work.volumeName }}
+        persistentVolumeClaim:
+          claimName: {{ .Values.storage.pvc.work.name }}
+      - name: {{ .Values.storage.pvc.conf.volumeName }}
+        persistentVolumeClaim:
+          claimName: {{ .Values.storage.pvc.conf.name }}
 status: {}
