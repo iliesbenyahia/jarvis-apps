@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: adguardhome
+  name: adguardhome
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adguardhome
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: adguardhome
+    spec:
+      containers:
+      - image: adguard/adguardhome:v0.107.61
+        name: adguardhome
+        ports:
+        - containerPort: 80
+          name: web
+        - containerPort: 53
+          name: dns
+          protocol: UDP
+        resources: {}
+status: {}
