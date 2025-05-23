@@ -1,0 +1,10 @@
+apiVersion: v2
+name: external-secrets
+description: My personnal helm chart for external-secrets
+type: application
+version: 0.1.0
+appVersion: "v2.14.11"
+dependencies:
+- name: external-secrets
+  version: "0.17.0"
+  repository: "https://charts.external-secrets.io"
