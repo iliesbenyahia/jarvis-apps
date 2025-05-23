@@ -15,3 +15,5 @@ spec:
   tls:
     certResolver: default
 {{- end -}}
+## open udp port on traefik (53)
+## add ingressrouteudp
