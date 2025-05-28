@@ -1,0 +1,33 @@
+# `sandbox` namespace is no longer needed.
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: selfsigned-issuer
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: jarvis-ca
+  # Create CA root secret in `cert-manager` namespace instead of `sandbox` namespace.
+  namespace: cert-manager
+spec:
+  isCA: true
+  commonName: jarvis-ca
+  secretName: jarvis-ca
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: selfsigned-issuer
+    kind: ClusterIssuer
+    group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: jarvia-ca
+spec:
+  ca:
+    secretName: jarvis-ca

@@ -7,4 +7,4 @@ appVersion: "v1.17.2"
 dependencies:
 - name: cert-manager
   version: "1.17.2"
-  repository: "https://charts.external-secrets.io"
+  repository: "https://charts.jetstack.io"
