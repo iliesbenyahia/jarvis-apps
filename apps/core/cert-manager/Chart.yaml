@@ -1,0 +1,10 @@
+apiVersion: v2
+name: cert-manager
+description: My personnal helm chart for cert-manager
+type: application
+version: 0.0.1
+appVersion: "v1.17.2"
+dependencies:
+- name: cert-manager
+  version: "1.17.2"
+  repository: "https://charts.external-secrets.io"
