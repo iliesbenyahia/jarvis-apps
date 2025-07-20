@@ -27,3 +27,5 @@ spec:
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
+        - Delete=false
+        - Prune=false
