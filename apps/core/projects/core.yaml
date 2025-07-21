@@ -12,5 +12,3 @@ spec:
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
-  syncPolicy:
-    preserveResourcesOnDeletion: true
