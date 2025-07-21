@@ -16,7 +16,7 @@ spec:
     metadata:
       name: '{{.path.basename}}'
     spec:
-      project: "core"
+      project: "homemade"
       source:
         repoURL: https://github.com/iliesbenyahia/{{.path.basename}}.git
         targetRevision: HEAD
