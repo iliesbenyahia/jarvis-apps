@@ -1,0 +1,13 @@
+adguard-home:
+  image:
+    repository: adguard/adguardhome
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: ""
+  fullnameOverride: adguard-home
+  name-override: adguard-home
+
+traefik:
+  ingress:
+    enabled: true
+    domain: "adguardhome.jarvis.lan"

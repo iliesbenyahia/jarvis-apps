@@ -1,0 +1,37 @@
+{{- if .Values.traefik.ingress.enabled -}}
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: adguard-home-https
+  namespace: adguard-home
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`{{ .Values.traefik.ingress.domain }}`)
+      priority: 10
+      services:
+        - name: adguard-home-https
+          port: 443
+  tls:
+    certResolver: default
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: adguard-home-http
+  namespace: adguard-home
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: Host(`{{ .Values.traefik.ingress.domain }}`)
+      priority: 10
+      services:
+        - name: adguard-home-http
+          port: 80
+  tls:
+    certResolver: default
+{{- end -}}
