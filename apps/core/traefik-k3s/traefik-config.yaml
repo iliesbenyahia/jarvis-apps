@@ -15,4 +15,5 @@ spec:
         port: 8053
         expose:
           default: true
+        exposedPort: 53
         protocol: UDP
