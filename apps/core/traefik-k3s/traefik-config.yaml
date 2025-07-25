@@ -20,4 +20,4 @@ spec:
     ingressRoute:
       dashboard:
         enabled: true
-        matchRule: (Host(`traefik.jarvis.lan`) && PathPrefix(`/dashboard`)) || (Host(`traefik.jarvis.lan`) && PathPrefix(`/api`))
+        matchRule: Host(`traefik.jarvis.lan`)
