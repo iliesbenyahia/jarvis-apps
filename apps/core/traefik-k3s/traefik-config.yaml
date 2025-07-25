@@ -21,3 +21,6 @@ spec:
       dashboard:
         enabled: true
         matchRule: Host(`traefik.jarvis.lan`)
+        entryPoints: 
+          - web
+          - websecure
