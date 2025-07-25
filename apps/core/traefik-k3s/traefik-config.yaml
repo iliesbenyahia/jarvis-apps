@@ -17,3 +17,6 @@ spec:
           default: true
         exposedPort: 53
         protocol: UDP
+    ingressRoute:
+      dashboard:
+        enabled: true
