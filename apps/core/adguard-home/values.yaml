@@ -6,9 +6,10 @@ adguard-home:
     tag: ""
   fullnameOverride: adguard-home
   name-override: adguard-home
-  users:
-    - name: admin
-      password: $2y$10$SW5CEVVXcnSmlSSkgcZoleJLQTnSHMf4MTQa7Y3JK17ExZBmUD5EC
+  bootstrapConfig:
+    users:
+      - name: admin
+        password: $2y$10$SW5CEVVXcnSmlSSkgcZoleJLQTnSHMf4MTQa7Y3JK17ExZBmUD5EC
   tls:
     enabled: false
 traefik:
