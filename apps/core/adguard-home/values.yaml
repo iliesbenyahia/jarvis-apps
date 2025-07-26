@@ -6,10 +6,12 @@ adguard-home:
     tag: ""
   fullnameOverride: adguard-home
   name-override: adguard-home
+  tls:
+    server_name: adguardhome.jarvis.lan
   #users:
   #  - name: admin
   #    password: $2y$10$SW5CEVVXcnSmlSSkgcZoleJLQTnSHMf4MTQa7Y3JK17ExZBmUD5EC
 traefik:
   ingress:
     enabled: true
-    domain: "adguardhome.jarvis.lan"
+    domain: adguardhome.jarvis.lan
