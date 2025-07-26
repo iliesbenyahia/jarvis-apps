@@ -14,8 +14,6 @@ spec:
       services:
         - name: adguard-home-https
           port: 443
-  tls:
-    certResolver: default
 ---
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
@@ -32,6 +30,4 @@ spec:
       services:
         - name: adguard-home-http
           port: 80
-  tls:
-    certResolver: default
 {{- end -}}
