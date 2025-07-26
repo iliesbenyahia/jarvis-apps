@@ -6,10 +6,9 @@ adguard-home:
     tag: ""
   fullnameOverride: adguard-home
   name-override: adguard-home
-  users:
-    - name: ilies
-      password: $2y$10$zXqBFW66S3Kbo0TLUcqw5ON91u85qFx8Go0U3NKshecQJjAMThePW
-
+  #users:
+  #  - name: admin
+  #    password: $2y$10$SW5CEVVXcnSmlSSkgcZoleJLQTnSHMf4MTQa7Y3JK17ExZBmUD5EC
 traefik:
   ingress:
     enabled: true
