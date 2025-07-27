@@ -30,4 +30,5 @@ spec:
         syncOptions:
         - CreateNamespace=true
         - Delete=false
-        - Prune=false
+        - ServerSideApply=true
+        - PruneLast=true
