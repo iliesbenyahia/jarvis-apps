@@ -1,0 +1,6 @@
+grafana:
+  domain: grafana.jarvis.lan
+alertmanager:
+  domain: alertmanager.jarvis.lan
+prometheus:
+  domain: prometheus.jarvis.lan
