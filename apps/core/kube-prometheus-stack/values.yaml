@@ -5,6 +5,3 @@ alertmanager:
 prometheus:
   domain: prometheus.jarvis.lan
 
-prometheus-stack:
-  alertmanager:
-    config:
