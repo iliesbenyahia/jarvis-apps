@@ -11,8 +11,8 @@ prometheus-stack:
       enabled: true
   defaultRules:
     disabled:
-      - KubeProxyDown: true
-      - KubeSchedulerDown: true 
+      KubeProxyDown: true
+      KubeSchedulerDown: true 
     rules:
       kubeControllerManager: false
 
