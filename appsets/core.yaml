@@ -29,6 +29,5 @@ spec:
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
-        - Delete=false
         - ServerSideApply=true
         - PruneLast=true
