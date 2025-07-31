@@ -12,16 +12,15 @@ prometheus-stack:
   alertmanager:
     config:
       route:
-        group_by: ['alertname', 'job']
-
+        group_by: ['alertname']
         group_wait: 30s
         group_interval: 5m
         repeat_interval: 3h
-
-        receiver: discord
+        receiver: 'discord'
 
       receivers:
-      - name: discord
+      - name: 'null'
+      - name: 'discord'
         discord_configs:
-        - webhook_url: https://discordapp.com/api/webhooks/1400524293452075099/G1CfA9Bj5VKJGnqMrEuGd9IajWU84YBZ5tIm5AbMAvLNNN1ZawWkzOTgL_49-ihlBj3F
+        - webhook_url: 'https://discordapp.com/api/webhooks/1400524293452075099/G1CfA9Bj5VKJGnqMrEuGd9IajWU84YBZ5tIm5AbMAvLNNN1ZawWkzOTgL_49-ihlBj3F'
       
