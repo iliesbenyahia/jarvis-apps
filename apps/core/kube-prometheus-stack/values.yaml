@@ -2,17 +2,20 @@ grafana:
   domain: grafana.jarvis.lan
 alertmanager:
   domain: alertmanager.jarvis.lan
-  config:
-    global:
-    route:
-      group-by: ['alertname', 'job']
-      group_wait: 30s
-      group_interval: 5m
-      repeat_interval: 3h
-      receiver: discord
-    receivers:
-    - name: 'discord'
-      discord_configs:
-        - webhook_url: https://discordapp.com/api/webhooks/1400524293452075099/G1CfA9Bj5VKJGnqMrEuGd9IajWU84YBZ5tIm5AbMAvLNNN1ZawWkzOTgL_49-ihlBj3F
 prometheus:
   domain: prometheus.jarvis.lan
+
+prometheus-stack:
+  alertmanager:
+    config:
+      global:
+      route:
+        group-by: ['alertname', 'job']
+        group_wait: 30s
+        group_interval: 5m
+        repeat_interval: 3h
+        receiver: discord
+      receivers:
+      - name: 'discord'
+        discord_configs:
+          - webhook_url: https://discordapp.com/api/webhooks/1400524293452075099/G1CfA9Bj5VKJGnqMrEuGd9IajWU84YBZ5tIm5AbMAvLNNN1ZawWkzOTgL_49-ihlBj3F
