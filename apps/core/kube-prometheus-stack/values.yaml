@@ -9,6 +9,13 @@ prometheus-stack:
   crds:
     upgradeJob:
       enabled: true
+  defaultRules:
+    disabled:
+      KubeProxyDown: true
+      KubeSchedulerDown: true 
+    rules:
+      kubeControllerManager: false
+
   alertmanager:
     config:
       route:
