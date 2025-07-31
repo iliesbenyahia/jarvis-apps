@@ -2,7 +2,7 @@ apiVersion: v2
 name: kube-prometheus-stack
 description: My personnal helm chart for kube-prometheus-stack
 type: application
-version: 75.15.0
+version: 75.15.1
 appVersion: "v0.83.0"
 dependencies:
 - name: kube-prometheus-stack
