@@ -2,7 +2,7 @@ apiVersion: v2
 name: external-secrets
 description: My personnal helm chart for external-secrets
 type: application
-version: 0.1.1
+version: 0.1.2
 appVersion: "v0.17.0"
 dependencies:
 - name: external-secrets
