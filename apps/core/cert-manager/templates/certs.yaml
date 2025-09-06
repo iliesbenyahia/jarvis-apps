@@ -1,4 +1,11 @@
 apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: selfsigned-issuer
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: jarvis-ca
@@ -15,3 +22,4 @@ spec:
     size: 256
   renewBeforePercentage: 80
   secretName: jarvis-ca
+
