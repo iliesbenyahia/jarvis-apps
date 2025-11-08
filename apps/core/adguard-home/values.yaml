@@ -9,7 +9,7 @@ adguard-home:
   bootstrapConfig:
     users:
       - name: admin
-        password: $2y$10$SW5CEVVXcnSmlSSkgcZoleJLQTnSHMf4MTQa7Y3JK17ExZBmUD5EC
+        password: $2y$10$Hzu0L03WlUOPzc8NmQbaKu2sXADOHnOYBY9XSI4xa0HILycD7cwj6
   tls:
     enabled: false
 traefik:
