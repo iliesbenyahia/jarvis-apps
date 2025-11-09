@@ -1,4 +1,8 @@
 minecraft:
+  persistence:
+    dataDir:
+      enabled: true
+      Size: 40Gi
   minecraftServer:
     type: "FABRIC"
     eula: true
@@ -6,10 +10,6 @@ minecraft:
     difficulty: "normal"
     ops: "SingeYaya"
     motd: "Le serveur des copains au lait, Melvyn t'es pas le bienvenu"
-    persistence:
-      dataDir:
-        enabled: true
-        Size: 40Gi
     rcon:
       enabled: true 
       withGeneratedPassword: true 
