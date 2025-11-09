@@ -16,6 +16,7 @@ minecraft:
         - fabric-api
         - lithium
         - moogs-voyager-structures
+        - inventory-sorting
       downloadDependencies: optional
     rcon:
       enabled: true 
