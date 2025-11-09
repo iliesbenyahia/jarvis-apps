@@ -2,7 +2,7 @@ minecraft:
   minecraftServer:
     type: "FABRIC"
     eula: true
-    levelSeed: 100000019937711188
+    levelSeed: "100000019937711188"
     difficulty: "normal"
     ops: "SingeYaya"
     motd: "Le serveur des copains au lait, Melvyn t'es pas le bienvenu"
