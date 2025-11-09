@@ -10,6 +10,5 @@ spec:
     - match: HostSNI(`*`)
       priority: 10
       services:
-        - kind: Service
-          name: mc-copainsaulait-minecraft
+        - name: mc-copainsaulait-minecraft
           port: minecraft
