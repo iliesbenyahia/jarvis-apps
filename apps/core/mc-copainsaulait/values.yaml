@@ -2,6 +2,10 @@ minecraft:
   minecraftServer:
     type: "FABRIC"
     eula: true
+  persistence:
+    dataDir:
+      enabled: true
+      Size: 40Gi
   rcon:
     enabled: true 
     withGeneratedPassword: true 
@@ -9,6 +13,7 @@ minecraft:
     enabled: true
     backupName: "copainsaulait"
     linkLatest: "true"
-  persistence:
-    dataDir:
-      enabled: true
+    persistence:
+      backupDir:
+        enabled: true
+        Size: 40Gi
