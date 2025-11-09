@@ -2,3 +2,10 @@ minecraft:
   minecraftServer:
     type: "FABRIC"
     eula: true
+  rcon:
+    enabled: true 
+    withGeneratedPassword: true 
+  mcbackup:
+    enabled: true
+    backupName: "copainsaulait"
+    linkLatest: "true"
