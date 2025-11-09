@@ -1,4 +1,4 @@
 minecraft:
-  eula: true
   minecraftServer:
     type: "FABRIC"
+    eula: true
