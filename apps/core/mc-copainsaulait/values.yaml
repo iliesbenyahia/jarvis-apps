@@ -9,6 +9,6 @@ minecraft:
     enabled: true
     backupName: "copainsaulait"
     linkLatest: "true"
-    persistence:
-      dataDir:
-        enabled: true
+  persistence:
+    dataDir:
+      enabled: true
