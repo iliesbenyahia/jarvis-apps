@@ -17,6 +17,13 @@ spec:
           default: true
         exposedPort: 53
         protocol: UDP
+      minecraft:
+        port: 25565
+        expose:
+          default: true
+        exposedPort: 25565
+        protocol: TCP
+
     ingressRoute:
       dashboard:
         enabled: true
