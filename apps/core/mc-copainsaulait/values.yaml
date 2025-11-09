@@ -1,0 +1,4 @@
+minecraft:
+  eula: true
+  minecraftServer:
+    type: "NEOFORGE"

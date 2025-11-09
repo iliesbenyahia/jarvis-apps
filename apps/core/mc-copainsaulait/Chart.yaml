@@ -1,0 +1,9 @@
+apiVersion: v2
+name: mc-copainsaulait
+description: Minecraft server for les copains au lait
+type: application
+version: 5.0.0-1
+dependencies:
+- name: minecraft
+  version: "5.0.0"
+  repository: "https://itzg.github.io/minecraft-server-charts"
