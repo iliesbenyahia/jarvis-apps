@@ -14,7 +14,9 @@ minecraft:
     rcon:
       enabled: true 
       withGeneratedPassword: false 
+      existingSecret: "rcon-password"
       secretKey: "rcon-password"
+    spawnProtection: 0
   mcbackup:
     enabled: true
     backupName: "copainsaulait"
