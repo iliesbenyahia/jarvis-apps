@@ -15,7 +15,6 @@ minecraft:
       projects: 
         - fabric-api
         - lithium
-        - moogs-voyager-structures
         - inventory-sorting
       downloadDependencies: optional
     rcon:
