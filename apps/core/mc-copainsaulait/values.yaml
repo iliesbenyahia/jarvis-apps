@@ -8,7 +8,8 @@ minecraft:
     eula: true
     levelSeed: "100000019937711188"
     difficulty: "normal"
-    ops: "SingeYaya"
+    ops: "SingeYaya,Anarchyz66,Bowsky33,GrosBoby"
+    minecraftServer.whitelist: "SingeYaya,Anarchyz66,Bowsky33,GrosBoby"
     motd: "Le serveur des copains au lait, Melvyn t'es pas le bienvenu"
     rcon:
       enabled: true 
