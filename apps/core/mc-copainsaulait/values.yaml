@@ -12,6 +12,8 @@ minecraft:
     ops: "SingeYaya,Anarchyz66,Bowsky33,GrosBoby"
     whitelist: "SingeYaya,Anarchyz66,Bowsky33,GrosBoby"
     motd: "Le serveur des copains au lait, Melvyn t'es pas le bienvenu"
+    memory: "6144M"
+    jvmXXOpts: "-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1"
     rcon:
       enabled: true 
       withGeneratedPassword: false 
@@ -26,3 +28,9 @@ minecraft:
       backupDir:
         enabled: true
         Size: 40Gi
+  resources:
+    requests: 
+      memory: 6144Mi
+      cpu: 2000m
+
+        
