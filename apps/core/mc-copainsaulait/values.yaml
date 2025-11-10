@@ -5,6 +5,7 @@ minecraft:
       Size: 40Gi
   minecraftServer:
     type: "PAPER"
+    version: "1.21.10"
     eula: true
     levelSeed: "100000019937711188"
     difficulty: "normal"
