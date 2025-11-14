@@ -22,7 +22,7 @@ minecraft:
     spawnProtection: 0
     modrinth:
       projects:
-        - distanthorizons
+        - uCdwusMi
   mcbackup:
     enabled: true
     backupName: "copainsaulait"
