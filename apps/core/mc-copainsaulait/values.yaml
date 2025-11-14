@@ -4,7 +4,7 @@ minecraft:
       enabled: true
       Size: 40Gi
   minecraftServer:
-    type: "FABRIC"
+    type: "NEOFORGE"
     version: "1.21.10"
     eula: true
     levelSeed: "100000019937711188"
@@ -22,7 +22,7 @@ minecraft:
     spawnProtection: 0
     modrinth:
       projects:
-        - uCdwusMi
+        - distanthorizons:beta
   mcbackup:
     enabled: true
     backupName: "copainsaulait"
