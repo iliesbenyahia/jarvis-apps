@@ -4,7 +4,7 @@ minecraft:
       enabled: true
       Size: 40Gi
   minecraftServer:
-    type: "FORGE"
+    type: "NEOFORGE"
     version: "1.21.10"
     eula: true
     levelSeed: "100000019937711188"
@@ -23,6 +23,8 @@ minecraft:
     modrinth:
       projects:
         - distanthorizons
+  extraEnv:
+    NEOFORGE_VERSION: "beta"
   mcbackup:
     enabled: true
     backupName: "copainsaulait"
