@@ -4,7 +4,7 @@ minecraft:
       enabled: true
       Size: 40Gi
   minecraftServer:
-    type: "PAPER"
+    type: "NEOFORGE"
     version: "1.21.10"
     eula: true
     levelSeed: "100000019937711188"
@@ -20,6 +20,9 @@ minecraft:
       existingSecret: "rcon-password"
       secretKey: "rcon-password"
     spawnProtection: 0
+    modrinth:
+      projects:
+        - distanthorizons
   mcbackup:
     enabled: true
     backupName: "copainsaulait"
