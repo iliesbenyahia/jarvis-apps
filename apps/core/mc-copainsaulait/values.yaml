@@ -23,6 +23,8 @@ minecraft:
     modrinth:
       projects:
         - distanthorizons:beta
+  extraEnv:
+    NEOFORGE_VERSION: "beta"
   mcbackup:
     enabled: true
     backupName: "copainsaulait"
