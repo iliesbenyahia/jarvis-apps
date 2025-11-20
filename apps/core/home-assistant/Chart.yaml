@@ -1,0 +1,11 @@
+apiVersion: v2
+name: home-assistant
+description: My personnal helm chart for home-assistant
+type: application
+version: "0.3.31
+appVersion: "2025.11.2"
+dependencies:
+- name: argo-cd
+  alias: home-assistant
+  version: "0.3.31"
+  repository: "http://pajikos.github.io/home-assistant-helm-chart/"

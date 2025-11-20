@@ -1,0 +1,10 @@
+apiVersion: v2
+name: pihole
+description: Helm chart for pihole
+type: application
+version: 2.34.0
+appVersion: "2025.08.0"
+dependencies:
+- name: pihole
+  version: "2.34.0"
+  repository: "https://mojo2600.github.io/pihole-kubernetes/"

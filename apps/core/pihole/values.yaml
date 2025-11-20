@@ -1,4 +1,4 @@
-adguard-home:
+pihole:
   image:
     repository: adguard/adguardhome
     pullPolicy: IfNotPresent
@@ -15,4 +15,4 @@ adguard-home:
 traefik:
   ingress:
     enabled: true
-    domain: adguardhome.jarvis.lan
+    domain: pihole.jarvis.lan
