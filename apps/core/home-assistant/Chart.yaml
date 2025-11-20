@@ -7,4 +7,4 @@ appVersion: "2025.11.2"
 dependencies:
 - name: pajikos/home-assistant
   version: "0.3.31"
-  repository: "http://pajikos.github.io/home-assistant-helm-chart"
+  repository: "https://pajikos.github.io/home-assistant-helm-chart"
