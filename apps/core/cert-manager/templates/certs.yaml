@@ -4,22 +4,3 @@ metadata:
   name: selfsigned-issuer
 spec:
   selfSigned: {}
----
-apiVersion: cert-manager.io/v1
-kind: Certificate
-metadata:
-  name: jarvis-ca
-  namespace: cert-manager
-spec:
-  commonName: jarvis-ca
-  isCA: true
-  issuerRef:
-    group: cert-manager.io
-    kind: ClusterIssuer
-    name: selfsigned-issuer
-  privateKey:
-    algorithm: ECDSA
-    size: 256
-  renewBeforePercentage: 80
-  secretName: jarvis-ca
-
