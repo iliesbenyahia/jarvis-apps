@@ -35,4 +35,9 @@ prometheus-stack:
       - name: 'discord'
         discord_configs:
         - webhook_url: 'https://discordapp.com/api/webhooks/1400524293452075099/G1CfA9Bj5VKJGnqMrEuGd9IajWU84YBZ5tIm5AbMAvLNNN1ZawWkzOTgL_49-ihlBj3F'
-      
+    
+  grafana:
+    admin:
+      existingSecret: "grafana-admin-creds"
+      userKey: "grafana-admin-login"
+      passwordKey: "grafana-admin-password"
