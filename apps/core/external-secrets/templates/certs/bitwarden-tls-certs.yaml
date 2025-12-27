@@ -18,5 +18,5 @@ spec:
     size: 2048
     rotationPolicy: Always
   issuerRef:
-    name: jarvis-ca
+    name: jarvis-ca-issuer
     kind: ClusterIssuer
