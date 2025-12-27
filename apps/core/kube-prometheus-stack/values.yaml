@@ -23,8 +23,9 @@ prometheus-stack:
 
   alertmanager:
     alertmanagerSpec:
+      useExistingSecret: true
       configSecret: "alertmanager-config-secret"
-      
+
   grafana:
     admin:
       existingSecret: "grafana-admin-creds"
