@@ -23,21 +23,10 @@ prometheus-stack:
 
   alertmanager:
     alertmanagerSpec:
+      useExistingSecret: true
       secrets:
         - alertmanager-secrets
-    config:
-      route:
-        receiver: 'discord'
-        group_by: ['alertname']
-        group_wait: 30s
-        group_interval: 5m
-        repeat_interval: 3h
-        routes:
-        - receiver: 'discord'
-      receivers:
-      - name: 'discord'
-        discord_configs:
-        - webhook_url_file: /etc/alertmanager/secrets/alertmanager-secrets/discord-url
+      configSecret: alertmanager-config
     
   grafana:
     admin:
