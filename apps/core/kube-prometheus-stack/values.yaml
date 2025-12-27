@@ -22,7 +22,8 @@ prometheus-stack:
       kubeControllerManager: false
 
   alertmanager:
-    config:
+    tplConfig: true
+    stringConfig: |
       route:
         receiver: 'discord'
         group_by: ['alertname']
@@ -33,11 +34,8 @@ prometheus-stack:
         - receiver: 'discord'
       receivers:
       - name: 'discord'
-        discord_configs:
-          - api_url:
-              name: alertmanager-secrets
-              key: discord-url
-            sendResolved: true
+        discord_config:
+        - webhook_url_file: /etc/alertmanager/secrets/alertmanager-secrets/discord-url
 
     alertmanagerSpec:
       secrets:
