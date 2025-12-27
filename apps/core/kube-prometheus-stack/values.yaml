@@ -23,7 +23,6 @@ prometheus-stack:
 
   alertmanager:
     alertmanagerSpec:
-      useExistingSecret: true
       secrets:
         - alertmanager-secrets
     config:
