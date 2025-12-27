@@ -23,8 +23,9 @@ prometheus-stack:
 
   alertmanager:
     alertmanagerSpec:
+      useExistingSecret: true
       secrets:
-        - jarvis-discord-webhook
+        - jarvis-discord-webhook 
     config:
       route:
         receiver: 'discord'
