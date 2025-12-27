@@ -9,6 +9,7 @@ prometheus-stack:
   crds:
     upgradeJob:
       enabled: true
+      forceConflicts: true
   kubeScheduler:
     enabled: false
   kubeProxy:
