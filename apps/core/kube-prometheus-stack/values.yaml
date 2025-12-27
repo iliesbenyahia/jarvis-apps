@@ -22,7 +22,7 @@ prometheus-stack:
       kubeControllerManager: false
 
   alertmanager:
-    config: 
+    config:
       route:
         receiver: 'discord'
         group_by: ['alertname']
@@ -30,11 +30,11 @@ prometheus-stack:
         group_interval: 5m
         repeat_interval: 3h
         routes:
-          - receiver: 'discord'
+        - receiver: 'discord'
       receivers:
-        - name: 'discord'
-          discord_configs:
-            webhook_url_file: /etc/alertmanager/secrets/alertmanager-secrets/discord-url
+      - name: 'discord'
+        discord_configs:
+        - webhook_url_file: /etc/alertmanager/secrets/alertmanager-secrets/discord-url
 
     alertmanagerSpec:
       secrets:
