@@ -22,20 +22,9 @@ prometheus-stack:
       kubeControllerManager: false
 
   alertmanager:
-    config:
-      route:
-        receiver: 'discord'
-        group_by: ['alertname']
-        group_wait: 30s
-        group_interval: 5m
-        repeat_interval: 3h
-        routes:
-        - receiver: 'discord'
-      receivers:
-      - name: 'discord'
-        discord_configs:
-        - webhook_url: 'https://discordapp.com/api/webhooks/1400524293452075099/G1CfA9Bj5VKJGnqMrEuGd9IajWU84YBZ5tIm5AbMAvLNNN1ZawWkzOTgL_49-ihlBj3F'
-    
+    alertmanagerSpec:
+      configSecret: "alertmanager-config-secret"
+      
   grafana:
     admin:
       existingSecret: "grafana-admin-creds"
