@@ -23,9 +23,22 @@ prometheus-stack:
 
   alertmanager:
     alertmanagerSpec:
-      useExistingSecret: true
-      configSecret: "alertmanager-config-secret"
-
+      secrets:
+        - jarvis-discord-webhook
+    config:
+      route:
+        receiver: 'discord'
+        group_by: ['alertname']
+        group_wait: 30s
+        group_interval: 5m
+        repeat_interval: 3h
+        routes:
+        - receiver: 'discord'
+      receivers:
+      - name: 'discord'
+        discord_configs:
+        - webhook_url_file: /etc/alertmanager/secrets/alertmanager-secrets/webhook_url
+    
   grafana:
     admin:
       existingSecret: "grafana-admin-creds"
