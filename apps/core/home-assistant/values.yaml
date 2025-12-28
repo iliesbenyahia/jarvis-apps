@@ -419,7 +419,7 @@ addons:
       # Service port
       port: 12321
     # Ingress settings for the code-server addon
-    ingress:pajikos/home-assistant
+    ingress:
       # Enable or disable the ingress for the code-server addon
       enabled: false
       # Ingress class name
