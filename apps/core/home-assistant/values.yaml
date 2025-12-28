@@ -452,3 +452,5 @@ home-assistant:
 
   # Deployment strategy type (RollingUpdate, Recreate)
   deploymentStrategy: RollingUpdate
+
+#zigbee2mqtt:

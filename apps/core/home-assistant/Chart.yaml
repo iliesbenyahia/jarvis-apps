@@ -8,3 +8,6 @@ dependencies:
 - name: home-assistant
   version: "0.3.31"
   repository: "https://pajikos.github.io/home-assistant-helm-chart"
+- name: zigbee2mqtt
+  version: "9.35.0"
+  repository: "https://andrenarchy.github.io/helm-charts"
