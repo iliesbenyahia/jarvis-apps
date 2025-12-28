@@ -402,7 +402,7 @@ addons:
       # Tag for the code-server image
       tag: "4.105.1"
     # Authentication settings for the code-server addon
-    auth:pajikos/home-assistant
+    auth:
       # Enable or disable authentication (if disabled, --auth none is used)
       enabled: false
       # Existing secret containing the password
