@@ -455,7 +455,7 @@ home-assistant:
 
 zigbee2mqtt:
   service:
-    type: ClusterIp
+    type: ClusterIP
   zigbee2mqtt:
     homeassistant:
       permit_join: true
