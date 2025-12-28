@@ -5,6 +5,6 @@ type: application
 version: "0.3.31"
 appVersion: "2025.11.2"
 dependencies:
-- name: pajikos/home-assistant
+- name: home-assistant
   version: "0.3.31"
   repository: "https://pajikos.github.io/home-assistant-helm-chart"
