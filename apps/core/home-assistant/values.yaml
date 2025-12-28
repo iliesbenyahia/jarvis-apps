@@ -454,7 +454,8 @@ home-assistant:
   deploymentStrategy: RollingUpdate
 
 zigbee2mqtt:
-  usb:
-    enabled: true
-    hostPath: /dev/serial/by-id/usb-SONOFF_SONOFF_Dongle_Plus_MG24_02e901b2c59aef11a968ab9061ce3355-if00-port0
+  persistence:
+    usb:
+      enabled: true
+      hostPath: /dev/serial/by-id/usb-SONOFF_SONOFF_Dongle_Plus_MG24_02e901b2c59aef11a968ab9061ce3355-if00-port0
     
