@@ -486,3 +486,5 @@ mosquitto:
     listener 9090
     protocol websockets
     allow_anonymous true
+  service:
+    externalTrafficPolicy: Local
