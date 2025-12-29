@@ -487,4 +487,4 @@ mosquitto:
     protocol websockets
     allow_anonymous true
   service:
-    externalTrafficPolicy: Cluster
+    externalTrafficPolicy: null
