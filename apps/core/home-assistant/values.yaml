@@ -474,4 +474,6 @@ zigbee2mqtt:
     serial:
       port: "/dev/ttyZigbee"
       adapter: ember
+    mqtt: 
+      server: "mqtt://home-assistant-mosquitto:1883"
     
