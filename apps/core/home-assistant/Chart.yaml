@@ -11,3 +11,6 @@ dependencies:
 - name: zigbee2mqtt
   version: "2.7.1"
   repository: "https://charts.zigbee2mqtt.io/"
+- name: mosquitto
+  version: "1.0.4"
+  repository: "https://naps.github.io/helm-charts/"
