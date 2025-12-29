@@ -479,4 +479,5 @@ zigbee2mqtt:
     
 mosquitto:
   mosquitto:
-    config: "allow_anonymous true"
+    config: |
+      allow_anonymous true
