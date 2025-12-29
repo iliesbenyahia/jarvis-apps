@@ -477,3 +477,6 @@ zigbee2mqtt:
     mqtt: 
       server: "mqtt://home-assistant-mosquitto:1883"
     
+mosquitto:
+  mosquitto:
+    config: "allow_anonymous true"
