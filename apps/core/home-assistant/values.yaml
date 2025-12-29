@@ -478,6 +478,11 @@ zigbee2mqtt:
       server: "mqtt://home-assistant-mosquitto:1883"
     
 mosquitto:
-  mosquitto:
-    config: |
-      allow_anonymous true
+  config: |
+    persistence true
+    persistence_location /mosquitto/data/
+    log_dest stdout
+    listener 1883
+    listener 9090
+    protocol websockets
+    allow_anonymous true
