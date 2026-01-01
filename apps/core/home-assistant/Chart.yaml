@@ -9,7 +9,7 @@ dependencies:
   version: "0.3.31"
   repository: "https://pajikos.github.io/home-assistant-helm-chart"
 - name: zigbee2mqtt
-  version: "2.7.1"
+  version: "2.7.2"
   repository: "https://charts.zigbee2mqtt.io/"
 - name: mosquitto
   version: "2.6.1"
