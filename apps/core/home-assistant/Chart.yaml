@@ -6,7 +6,7 @@ version: "0.3.31"
 appVersion: "2025.11.2"
 dependencies:
 - name: home-assistant
-  version: "0.3.31"
+  version: "0.3.38"
   repository: "https://pajikos.github.io/home-assistant-helm-chart"
 - name: zigbee2mqtt
   version: "2.7.1"
